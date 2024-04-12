@@ -42,7 +42,7 @@ function About() {
            The point of using Lorem Ipsum is that it has a more-o
         </P>
         <ReadMore>
-          <Button $backgroundcolor='#ffffff' color='#000000' to='about'>Read More </Button>
+          <Button $backgroundcolor='#ffffff' color='#000000' to='/about'>Read More </Button>
         </ReadMore>
       </ContentDiv>
     </AboutComponent>

@@ -13,4 +13,8 @@ export const Button = styled(NavLink)`
   font-size: ${props => props.fontsize ? props.fontsize : '1.8rem'}; 
   justify-content: center;
   align-items: center;
+
+  @media (max-width:1080px){
+    font-size:1.6rem ;
+  }
 `;

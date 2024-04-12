@@ -61,6 +61,7 @@ const ServicesComponent = styled.div`
 const ServicesHeading = styled.div`
    width: 100%;
    position: relative;
+   margin-bottom:10rem;
    
 `
 function Services() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { P } from '../ui/P';
+import Heading from '../ui/Heading';
 
 const ServicesItem = styled.div`
   width: 88%;
@@ -11,13 +12,7 @@ const ServicesItem = styled.div`
   border-radius: 1rem;
   padding: 1.5rem 1rem 0 1rem;
  margin-top: 3rem;
-`;
-const H1 =styled.h1`
-color: #000000;
-font-size: 3rem;
-font-weight: bold;
-line-height: normal;
-margin-bottom: 3rem;
+ gap: 2rem;
 `;
 const ImgDiv = styled.div`
 width: 35%;
@@ -27,8 +22,6 @@ width: 100%;
 `
 
 function ServicesItems({item,image}) {
-    // console.log(item.img)
-    // console.log(image)
   
   return (
     <ServicesItem>
@@ -36,7 +29,14 @@ function ServicesItems({item,image}) {
      <img src={image} alt='images/img-1'/>
      </ImgDiv>
      <Contents>
-     <H1>{item.title}</H1>
+     <Heading 
+     as='h1'
+     color='#000000'
+     $textalign='start'
+     fontSize='2.8rem'
+     $lineheight='normal'
+     margin='0 0 3rem 0'
+     >{item.title}</Heading>
      <P>{item.paragraph}</P>
      </Contents>
      

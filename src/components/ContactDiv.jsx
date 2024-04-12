@@ -2,9 +2,11 @@ import styled from 'styled-components';
 import { Ul } from '../ui/Ul';
 import { Li } from '../ui/Li';
 import { NavLinks } from '../ui/NavLinks';
-import { Button } from '../ui/Button';
 import CallIcon from '../images/call-icon.png';
 import MailIcon from '../images/mail-icon.png';
+import { EmailSubscribe } from '../ui/EmailSubscribe';
+import { StyledInput } from '../ui/StyledInput';
+import { SubscribeButton } from '../ui/SubscribeButton';
 
 const Contacts = styled.div`
 width: 100%;
@@ -13,32 +15,14 @@ justify-content: space-between;
 align-items: center;
 background-color: var(--color-dark);
 padding: 0rem 8rem;
-`; 
-const EmailSubscribe= styled.div`
-width: 50%;
-display: flex;
-align-items: stretch;
-position: relative;
-margin: 3rem 0;
-`
-const StyledInput = styled.input`
-  width: 100%;
-  height: 6rem;
-  padding: 1rem 3rem;
-  border: none;
-  border-radius: 3rem;
-  box-sizing: border-box;
-  outline:none;
-  font-size: 1.8rem;
-`;
-const SubscribeButton = styled(Button)`
-  position: absolute;
-  top: calc(50% - 2rem);
-  right: 1rem;
-  height: 4rem;
-  border-radius: 2rem;
-`
 
+@media (max-width: 1080px){
+  padding: 0rem 5rem;
+}
+@media (max-width: 970px){
+  padding: 0rem 3rem;
+}
+`; 
 function ContactDiv() {
   return (
     <Contacts>

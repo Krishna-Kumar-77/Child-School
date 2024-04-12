@@ -3,6 +3,9 @@ import Img from '../images/img-1.png'
 import styled from 'styled-components';
 //import Navigationbar from './Navigationbar';
 import { NavLink } from 'react-router-dom';
+import Heading from './Heading';
+import {P} from './P';
+import { BtnNavLinks } from './BtnNavLinks';
 // import images from '../images/image.js';
 
 
@@ -20,62 +23,22 @@ min-height specifies the minimum height that an element should have, preventing 
 */
 `;
 const Contents = styled.div`
-/* width: 60rem; */
+width: 100%;
 position: relative;
 display: flex;
 margin: 0 auto;
-flex-wrap: wrap;
-/* justify-content: center; */
+justify-content: center;
 padding: 0 9rem;
 `;
 const Content= styled.div`
- width: 50%;
+ width: 100%;
  padding: 0 1.5rem;
 `;
 
-const NavLinks = styled(NavLink)`
-    width: 35%;
-    float: left;
-    font-size: 1.8rem;
-    color: #0d7550;
-    border: 2px solid #0d7550;
-    text-align: center;
-    padding: 0.8rem 0;
-    border-radius: 3px;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-right: 1rem;
-`;
 const Img1= styled.img`
 width:100%;
-/* top: 0;
-float: right; */
-`;
-const H1 =styled.h1`
-color: #000000;
-font-size: 4.6rem;
-font-weight: bold;
-line-height: normal;
-margin-bottom: 3rem;
 `;
 
-const H4 = styled.h4`
-color: #151515;
-  font-size: 3.2rem;
-font-weight: normal;
-line-height: normal;
-margin-bottom: 1.5rem;
-padding-top: 5rem;
-
-`;
-const P = styled.p`
-text-align: justify;
-color: #444444;
-font-size: 1.8rem;
-font-weight: 300;
-margin-left: 0rem;
-line-height: 2.4rem;
-`;
 const ControlledButton = styled.div`
   position: absolute;
   top: 40%;
@@ -116,7 +79,12 @@ color: #09653e !important;
   
 `
 const EditedContent = styled(Content)`
+  width: 90%;
   padding: 0;
+
+  @media (max-width:1080px){
+    width: 90%;
+  }
 `;
 
 function Header() {
@@ -125,14 +93,35 @@ function Header() {
     {/* <Navigationbar/> */}
     <Contents>
         <Content>
-         <H4>We Are Making Every</H4>
-         <H1>Child`s World Better</H1>
-         <P>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.<br />
-            The point of using Lorem
+         <Heading
+         as='h4'
+         color='#151515'
+         fontSize='3.2rem'
+         $margin='0 0 1.5rem 0'
+         $padding='5rem 0 0 0'
+         $lineheight='normal'
+         fontWeight='normal'
+         $textalign='start'
+         >
+          We Are Making Every
+          </Heading>
+         <Heading 
+         as='h1'
+         color='#000000'
+         fontSize='4rem'
+         $margin='0 0 3rem 0'
+         $padding='5rem 0 0 0'
+         fontWeight='800'
+         $textalign='start'
+         $fontFamily='inherit'
+         >
+          Child`s World Better
+          </Heading>
+         <P color='#444444' fontSize='1.8rem' $lineheight='2.8rem'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
         </P>
         <LinkContainer>
-            <NavLinks to='/AboutUs'>About Us</NavLinks>
-            <NavLinks to='/ContactUs'>Contact Now</NavLinks>
+            <BtnNavLinks to='/about'>About Us</BtnNavLinks>
+            <BtnNavLinks to='/contact'>Contact Now</BtnNavLinks>
         </LinkContainer>
         </Content>
         <EditedContent>

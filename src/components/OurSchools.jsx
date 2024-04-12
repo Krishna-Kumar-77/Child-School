@@ -54,15 +54,20 @@ const MyImage = styled(Imag)`
   border-radius: 3px;
   top: -5rem;
 `;
+const MyHeading = styled(Heading)`
+@media (max-width: 950px){
+font-size: 2.2rem;
+}
+`
 function OurSchools() {
   return (
     <AboutOurSchool>
       <Div>
         <div style={{ marginBottom: "5rem" }}>
           <div>
-            <Heading as="h1" color="#ffffff" fontWeight="500">
+            <MyHeading as="h1" color="#ffffff" fontWeight="500">
               ABOUT OUR SCHOOL
-            </Heading>
+            </MyHeading>
             <UnderLineDiv $backgroundcolor="#ffffff"></UnderLineDiv>
           </div>
           <P width="100%" color="#ffffff">

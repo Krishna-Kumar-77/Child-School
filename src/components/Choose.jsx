@@ -9,6 +9,7 @@ import { CardComponent } from '../ui/CardComponent';
 import { ImgDiv } from '../ui/ImgDiv';
 import { Imag } from '../ui/Imag';
 import { Button } from '../ui/Button';
+// import {  useHistory  } from 'react-router-dom';
 
 
 const ChooseComponent = styled.div`
@@ -22,25 +23,23 @@ const ChooseComponent = styled.div`
 const Div = styled.div`
   margin-bottom: 5rem;
 `
+const MyParas = styled(P)`
+  width:85%;
+`
 function Choose() {
-  // const data ={
-  //   img: {
-  //     src: `${Images}`,
-  //     alt: `My-Logo`
-  //   },
-  //   headingdata: {
-  //     types: 'h3',
-  //     heading: 'PURE WATER',
-  //   },
-  //   p : 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by i',
-  //   Button: 'Read More',
+  // const navigate = useNavigate();
+  // const history = useHistory();
+  // function onClicks(e){
+  //   e.preventDefault();
+  //   history.push('/choose');
+  //   //  navigate('/choose');
   // }
   return (
     <ChooseComponent>
       <Div>
         <Heading as='h1'>WHY CHOOSE OUR SCHOOL</Heading>
         <UnderLineDiv></UnderLineDiv>
-         <P width ='100%' $margin='2rem 0' >It is a long established fact that a reader will be distracted by the readable content of a page</P>
+         <P width ='100%' $margin='2rem 0' $textalign='center' >It is a long established fact that a reader will be distracted by the readable content of a page</P>
       </Div>
       <GridView>
       <CardComponent >
@@ -50,10 +49,10 @@ function Choose() {
           <Heading color="#282828" as="h3">
           PURE WATER
           </Heading>
-          <P $margin="2rem 0" width="65%">
+          <MyParas $margin="2rem 0" width="65%">
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by i
-          </P>
-          <Button to='choose'>Read More</Button>
+          </MyParas>
+          <Button to='/choose'preventScrollReset={true} >Read More</Button>
         </CardComponent>
         <CardComponent >
           <ImgDiv>
@@ -62,10 +61,10 @@ function Choose() {
           <Heading color="#282828" as="h3">
           PURE WATER
           </Heading>
-          <P $margin="2rem 0" width="65%">
+          <MyParas $margin="2rem 0" width="65%">
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by i
-          </P>
-          <Button to='choose'>Read More</Button>
+          </MyParas>
+          <Button to='/choose' >Read More</Button>
         </CardComponent>
         <CardComponent >
           <ImgDiv>
@@ -74,10 +73,10 @@ function Choose() {
           <Heading color="#282828" as="h3">
           PURE WATER
           </Heading>
-          <P $margin="2rem 0" width="65%">
+          <MyParas $margin="2rem 0" width="65%">
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by i
-          </P>
-          <Button to='choose'>Read More</Button>
+          </MyParas>
+          <Button to='/choose'>Read More</Button>
         </CardComponent>
       {/* <Card >
         {data} 

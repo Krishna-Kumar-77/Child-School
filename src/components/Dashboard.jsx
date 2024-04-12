@@ -1,5 +1,4 @@
 import React from 'react'
- import Navigationbar from '../ui/Navigationbar';
 import Header from '../ui/Header';
 import styled from 'styled-components';
 import Services from './Services';
@@ -12,19 +11,16 @@ import ContactDiv from './ContactDiv';
 
 const DashboardDiv = styled.div`
   width: 100%;
-  background-image: url('../images/banner-bg.png');
+  background-color:transparent;
   background-size: 100%;
   background-repeat: no-repeat;
 `
-const NavDiv = styled.div`
-  padding: 0 1.5rem;
-`;
+// const NavDiv = styled.div`
+//   padding: 0 1.5rem;
+// `;
 function Dashboard() {
   return (
     <DashboardDiv>
-      <NavDiv>
-     <Navigationbar/>
-      </NavDiv>
      <Header/>
      <Services/>
      <About/>

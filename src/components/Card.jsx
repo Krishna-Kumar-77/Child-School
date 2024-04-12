@@ -28,7 +28,7 @@ function Card({children}) {
        </Heading>
       <P $margin='2rem 0' width='65%'> {children.p}   </P>
          {
-          children.Button? <Button to='choose'>{children.Button}</Button>: ''
+          children.Button? <Button to='/choose'>{children.Button}</Button>: ''
          }
          
       </CardComponent>

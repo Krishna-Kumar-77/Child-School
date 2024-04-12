@@ -15,11 +15,23 @@ const BlogingComponent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10rem;
+  margin: 9rem 0 10rem 0;
 `;
 const Div = styled.div`
   margin-bottom: 5rem;
 `;
+const MyPara = styled(P)`
+@media (max-width:1220px){
+  width: 80%
+}
+
+`
+// const MyHeading = styled(Heading)`
+//   @media (max-width: 1280px){
+//     width: 85%;
+//     /* font-size:1.5rem; */
+//   }
+// `
 
 function Blog() {
   return (
@@ -27,9 +39,9 @@ function Blog() {
       <Div>
         <Heading as="h1">OUR BLOG</Heading>
         <UnderLineDiv></UnderLineDiv>
-        <P width="100%" $margin="2rem 0">
+        <P width="100%" $margin="2rem 0" $textalign='center'>
           It is a long established fact that a reader will be distracted by the
-          readable content of a page for the intertenment purpose{" "}
+          readable content of a page for the intertenment purpose
         </P>
       </Div>
       {/* CARD ITEMS START */}
@@ -42,10 +54,10 @@ function Blog() {
           <Heading color="#282828" as="h5">
             Distracted by the readable content of a
           </Heading>
-          <P $margin="2rem 0" width="65%">
+          <MyPara $margin="2rem 0" width="65%">
             It is a long established fact that a reader will be distracted by
             the readable content of a page
-          </P>
+          </MyPara>
         </CardComponent>
         <CardComponent $padding="0" $overflow='hidden'>
           <ImgDiv>
@@ -54,10 +66,10 @@ function Blog() {
           <Heading color="#282828" as="h5">
             Distracted by the readable content of a
           </Heading>
-          <P $margin="2rem 0" width="65%">
+          <MyPara $margin="2rem 0" width="65%">
             It is a long established fact that a reader will be distracted by
             the readable content of a page
-          </P>
+          </MyPara>
         </CardComponent>
         <CardComponent $padding="0" $overflow='hidden'>
           <ImgDiv>
@@ -66,10 +78,10 @@ function Blog() {
           <Heading color="#282828" as="h5">
             Distracted by the readable content of a
           </Heading>
-          <P $margin="2rem 0" width="65%">
+          <MyPara $margin="2rem 0" width="65%">
             It is a long established fact that a reader will be distracted by
             the readable content of a page
-          </P>
+          </MyPara>
         </CardComponent>
       </GridView>
     </BlogingComponent>

@@ -15,6 +15,9 @@ position: relative;
 background-color: transparent;
 padding: 0.8rem 1.6rem;
 margin-bottom: 9rem;
+@media (max-width:970px){
+  margin-bottom:5rem ;
+}
 `;
 const ImgLink = styled(Link)`
 background-color: transparent !important;
@@ -35,10 +38,9 @@ const SvgButton = styled.button`
    border: none;
 `;
 function Navigationbar() {
- 
   return (
    <Navbar >
-    <ImgLink to='/HomePage' >
+    <ImgLink to='/dashboard' >
       <img src={Logo} alt="company-logo" />
     </ImgLink>
     <SideHeader>
