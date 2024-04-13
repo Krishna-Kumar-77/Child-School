@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ServicesItems from './ServicesItems'
 import images from '../images/images.js';
 import styled from 'styled-components';
@@ -65,7 +65,10 @@ const ServicesHeading = styled.div`
    
 `
 function Services() {
-  
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <ServicesComponent>
     <ServicesHeading>

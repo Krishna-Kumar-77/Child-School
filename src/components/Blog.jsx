@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import images from "../images/img-12.png";
 import Heading from "../ui/Heading";
@@ -34,6 +34,11 @@ const MyPara = styled(P)`
 // `
 
 function Blog() {
+
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <BlogingComponent>
       <Div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { UnderLineDiv } from '../ui/UnderLineDiv';
 import styled from 'styled-components';
 import Images from '../images/img-8.png';
@@ -29,6 +29,10 @@ align-items: center;
 justify-content: space-around;
 `
 function About() {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <AboutComponent>
       <ImgDiv><Img src={Images} alt='about' /></ImgDiv>

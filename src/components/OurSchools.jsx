@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Heading from "../ui/Heading";
 import { UnderLineDiv } from "../ui/UnderLineDiv";
 import styled from "styled-components";
@@ -60,6 +60,10 @@ font-size: 2.2rem;
 }
 `
 function OurSchools() {
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <AboutOurSchool>
       <Div>
